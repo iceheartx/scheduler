@@ -1,0 +1,42 @@
+@import "base/colors";
+
+/***
+  title: Colors
+  section: Base
+  description: Colors in the App
+  example: |
+    <div class="bg-black swatch">black</div>
+    <div class="bg-gray swatch">gray</div>
+    <div class="bg-white swatch">white</div>
+***/
+
+.bg-black {
+  background-color: $black;
+}
+
+.bg-gray {
+  background-color: $gray;
+}
+
+.bg-white {
+  background-color: $white;
+}
+
+.swatch {
+  vertical-align: center;
+  text-align: center;
+  width: 200px;
+  height: 50px;
+  margin: 10px 0;
+  border: 1px solid $black;
+  text-shadow: 0 0 5px $white;
+  color: black;
+}
+
+.fake-styleguide-bg {
+  height: 300px;
+}
+
+.fake-results-page-bg {
+  height: 600px;
+}

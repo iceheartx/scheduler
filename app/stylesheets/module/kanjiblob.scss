@@ -1,0 +1,88 @@
+@import "../base/colors";
+
+/***
+  title: kanjiBlob
+  section: blob
+  description: a blob of data related to a single kanji
+  example: |
+    <div class="container">
+      <div class="row">
+        <div class="blob col-xs-4 title">
+          <div class="kanji">心</div>
+          <div>
+            <div class="romaji">shin</div>
+            <div class="english">heart</div>
+            <div class="hiragana">しん</div>
+          </div>
+        </div>
+        <div class="row">
+        <div class="blob col-xs-4">
+          <div class="kanji"><a href="#">心</a></div>
+          <div class="meta">
+            <div class="romaji">shin</div>
+            <div class="english">heart</div>
+            <div class="hiragana">しん</div>
+          </div>
+        </div>
+      </div>
+    </div>
+***/
+
+.row.title {
+  border-bottom: 3px solid $black;
+}
+
+body {
+  color: black;
+}
+
+.blob {
+  display: flex;
+  flex-basis: content;
+
+  .title {
+    font-weight: bold;
+    border: 0px;
+  }
+
+  &:not(.title) {
+    border-bottom: 1px solid $black;
+    border-right: 1px solid $black;
+  }
+  .kanji {
+    font-size: 24px;
+  }
+  .meta {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    display: block;
+    font-size: 12px;
+    .romaji {
+      background-color: green;
+
+    }
+    .characterNum {
+      background-color: yellow;
+      width: 3em;
+      float: right;
+    }
+    .english {
+      font-size: 8px;
+      background-color: $gray;
+
+    }
+    .hiragana {
+      background-color: #38306E;
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+a {
+  color: $black;
+  text-decoration: none;
+}

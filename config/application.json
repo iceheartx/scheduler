@@ -1,0 +1,9 @@
+{
+  "title": "Scheduler",
+  "scripts": [
+    "application.js"
+  ],
+  "stylesheets": [
+    "application.css"
+  ]
+}

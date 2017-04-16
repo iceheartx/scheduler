@@ -1,0 +1,11 @@
+exploring-the-sutras-a18589e6d208.json
+.env.json
+.idea
+/config/local.json
+/dist/*
+/node_modules
+/public/*
+/logs/*
+/tmp/*
+.DS_Store
+npm-debug.log

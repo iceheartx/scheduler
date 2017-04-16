@@ -1,0 +1,20 @@
+# [START runtime]
+runtime: nodejs
+vm: true
+# [END runtime]
+env_variables:
+  NODE_ENV: 'production'
+
+# Temporary setting to keep gcloud from uploading node_modules
+skip_files:
+ - ^node_modules$
+
+handlers:
+
+- url: /(.*\.(html|css|js|svg|png|ico))
+  static_files: public/\1
+  upload: public/(.*\.(html|css|js|svg|png|ico))
+
+- url: /
+  static_files: public/index.html
+  upload: public/index.html

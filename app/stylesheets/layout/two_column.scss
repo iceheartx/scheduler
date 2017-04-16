@@ -1,0 +1,27 @@
+/***
+  title: 2 Column
+  section: Layout
+  description: 2 column layout
+  example: |
+    <div class="two-column">
+      <div class="row">
+      <div>Column 1 content here</div>
+      <div>Column 2 content here</div>
+    </div>
+***/
+
+.two-column {
+  display: flex;
+
+  > * {
+    width: 50%;
+
+    &:first-child {
+      padding-right: 55px
+    }
+
+    &:last-child {
+      padding-left: 55px
+    }
+  }
+}

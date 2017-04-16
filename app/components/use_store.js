@@ -32,7 +32,7 @@ const useStore = Component => class extends React.Component {
                     },
 
                     {
-                        name: 'wheelie',
+                        name: 'fanshu',
                         server: false,
                         numFirewatch: 0,
                         numShoten: 1,

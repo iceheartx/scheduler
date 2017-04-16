@@ -12,8 +12,8 @@ class TangaryoMonks extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            seniorMonkNum: props.seniorMonkNum,
-            seniorMonk: props.seniorMonk
+            tangaryoMonkNum: props.tangaryoMonkNum,
+            tangaryoMonk: props.tangaryoMonk
         };
     }
 
@@ -26,15 +26,13 @@ class TangaryoMonks extends React.Component {
 
     render() {
         return <tr key={this.state.tangaryoMonkNum}>
-            <td>D{this.state.tangaryoMonkNum}</td>
+            <td>T{this.state.tangaryoMonkNum}</td>
             <td>{this.state.tangaryoMonk.name}</td>
-            <td><Checkbox defaultChecked={this.state.tangaryoMonk.jobs}></Checkbox></td>
-            <td><Checkbox defaultChecked={this.state.tangaryoMonk.soku}></Checkbox></td>
             <td><Checkbox defaultChecked={this.state.tangaryoMonk.server}></Checkbox></td>
-            <td>{(this.state.tangaryoMonk.jobs) ? this.state.tangaryoMonk.numFirewatch : ''}</td>
-            <td>{(this.state.tangaryoMonk.jobs) ? this.state.tangaryoMonk.numShoten : ''}</td>
-            <td>{(this.state.tangaryoMonk.jobs) ? this.state.tangaryoMonk.numJikido : ''}</td>
-            <td>{(this.state.tangaryoMonk.jobs) ? this.state.tangaryoMonk.numJikidoPd : ''}</td>
+            <td>{this.state.tangaryoMonk.numFirewatch }</td>
+            <td>{this.state.tangaryoMonk.numShoten }</td>
+            <td>{this.state.tangaryoMonk.numJikido }</td>
+            <td>{this.state.tangaryoMonk.numJikidoPd }</td>
         </tr>;
     }
 

@@ -8,4 +8,10 @@
   width: $content-width;
 }
 
-td { text-align: center;}
+th,td {
+  text-align: center;
+}
+
+form {
+  margin-top: 5px;
+}

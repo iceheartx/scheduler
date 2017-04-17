@@ -50,10 +50,7 @@ class SeniorMonks extends React.Component {
     render() {
         const seniorMonkRows = this.getSeniorMonks();
         return <Form horizontal>
-            <FormGroup
-                controlId="formBasicText"
-                validationState={this.getValidationState()}
-            >
+            <FormGroup controlId="formBasicText" validationState={this.getValidationState()}>
                 <Col componentClass={ControlLabel} sm={6}>
                     Number of Senior Monks
                 </Col>
@@ -61,6 +58,20 @@ class SeniorMonks extends React.Component {
                     <FormControl
                         type="text"
                         value={this.state.numSeniorMonks}
+                        placeholder="# monks"
+                        onChange={this.handleChange}
+                    />
+                    <FormControl.Feedback />
+                </Col>
+            </FormGroup>
+            <FormGroup controlId="formBasicText" validationState={this.getValidationState()}>
+                <Col componentClass={ControlLabel} sm={6}>
+                    Frequency
+                </Col>
+                <Col sm={6}>
+                    <FormControl
+                        type="text"
+                        value='2'
                         placeholder="# monks"
                         onChange={this.handleChange}
                     />

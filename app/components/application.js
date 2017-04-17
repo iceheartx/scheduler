@@ -12,6 +12,8 @@ const Ino = require('./ino');
 const Doans = require('./doans');
 const SeniorMonks = require('./seniorMonks');
 const TangaryoMonks = require('./tangaryoMonks');
+const Oryoki = require('./oryoki');
+const Dates = require('./dates');
 
 let content;
 
@@ -30,8 +32,8 @@ class Application extends React.Component {
                                                                     seniorMonks={this.state.seniorMonks}/></Tab>
                 <Tab eventKey={4} title="Tangaryo Monks"><TangaryoMonks numTangaryoMonks={this.state.numTangaryoMonks}
                                                                       tangaryoMonks={this.state.tangaryoMonks}/></Tab>
-                <Tab eventKey={5} title="Oryoki">Oryoki</Tab>
-                <Tab eventKey={6} title="Dates">Dates</Tab>
+                <Tab eventKey={5} title="Oryoki"><Oryoki doans={this.state.doans}/></Tab>
+                <Tab eventKey={6} title="Dates"><Dates /></Tab>
                 <Tab eventKey={7} title="Schedule">Schedule</Tab>
             </Tabs>;
     }

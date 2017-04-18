@@ -10,11 +10,3 @@ before_script:
 - sleep 3
 script:
 - gulp
-#deploy:
-#  provider: gae
-#  keyfile: exploring-the-sutras-a18589e6d208.json
-#  project: exploring-the-sutras-1221
-#before_install:
-#- openssl aes-256-cbc -K $encrypted_099efd342a6e_key -iv $encrypted_099efd342a6e_iv
-#  -in exploring-the-sutras-a18589e6d208.json.enc -out exploring-the-sutras-a18589e6d208.json
-#  -d

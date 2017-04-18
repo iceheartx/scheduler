@@ -37,21 +37,21 @@ class Dates extends React.Component {
             <FormGroup controlId="formBasicText" validationState={this.getValidationState()}>
                 <Col componentClass={ControlLabel} sm={6}> Schedule Start </Col>
                 <Col sm={6}>
-                    <FormControl type="date" value='2' placeholder="start date" onChange={this.handleChange}/>
+                    <FormControl type="date" placeholder="start date" onChange={this.handleChange}/>
                     <FormControl.Feedback />
                 </Col>
             </FormGroup>
             <FormGroup controlId="formBasicText" validationState={this.getValidationState()}>
                 <Col componentClass={ControlLabel} sm={6}> Schedule End </Col>
                 <Col sm={6}>
-                    <FormControl type="date" value='2' placeholder="end date" onChange={this.handleChange}/>
+                    <FormControl type="date" placeholder="end date" onChange={this.handleChange}/>
                     <FormControl.Feedback />
                 </Col>
             </FormGroup>
             <FormGroup controlId="formBasicText" validationState={this.getValidationState()}>
                 <Col componentClass={ControlLabel} sm={6}> tangaryo start</Col>
                 <Col sm={6}>
-                    <FormControl type="date" value='2' placeholder="end date" onChange={this.handleChange}/>
+                    <FormControl type="date" placeholder="end date" onChange={this.handleChange}/>
                     <FormControl.Feedback />
                 </Col>
             </FormGroup>

@@ -28,15 +28,15 @@ class SeniorMonks extends React.Component {
         }
         return <tbody>
         <tr>
-            <th>id</th>
-            <th>name</th>
-            <th>jobs?</th>
-            <th>soku?</th>
-            <th>server?</th>
-            <th>firewatch</th>
-            <th>shoten</th>
-            <th>jikido</th>
-            <th>jikido PD</th>
+            <th className="text-center">id</th>
+            <th className="text-center">name</th>
+            <th className="text-center">jobs?</th>
+            <th className="text-center">soku?</th>
+            <th className="text-center">server?</th>
+            <th className="text-center">firewatch</th>
+            <th className="text-center">shoten</th>
+            <th className="text-center">jikido</th>
+            <th className="text-center">jikido PD</th>
 
         </tr>
         {outputRows}

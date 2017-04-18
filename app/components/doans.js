@@ -26,15 +26,15 @@ class Doans extends React.Component {
         }
         return <tbody>
         <tr>
-            <th>id</th>
-            <th>name</th>
-            <th>soku?</th>
-            <th>kokyo</th>
-            <th>doan</th>
-            <th>tenkin</th>
-            <th>soku</th>
-            <th>soku WD</th>
-            <th>soku PD</th>
+            <th className="text-center">id</th>
+            <th className="text-center">name</th>
+            <th className="text-center">soku?</th>
+            <th className="text-center">kokyo</th>
+            <th className="text-center">doan</th>
+            <th className="text-center">tenkin</th>
+            <th className="text-center">soku</th>
+            <th className="text-center">soku WD</th>
+            <th className="text-center">soku PD</th>
 
         </tr>
         {outputRows}

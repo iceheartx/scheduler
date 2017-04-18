@@ -26,13 +26,13 @@ class TangaryoMonks extends React.Component {
 
     render() {
         return <tr key={this.state.tangaryoMonkNum}>
-            <td>T{this.state.tangaryoMonkNum}</td>
-            <td>{this.state.tangaryoMonk.name}</td>
-            <td><Checkbox defaultChecked={this.state.tangaryoMonk.server}></Checkbox></td>
-            <td>{this.state.tangaryoMonk.numFirewatch }</td>
-            <td>{this.state.tangaryoMonk.numShoten }</td>
-            <td>{this.state.tangaryoMonk.numJikido }</td>
-            <td>{this.state.tangaryoMonk.numJikidoPd }</td>
+            <td className="text-center">T{this.state.tangaryoMonkNum}</td>
+            <td className="text-left">{this.state.tangaryoMonk.name}</td>
+            <td className="text-center"><Checkbox defaultChecked={this.state.tangaryoMonk.server}></Checkbox></td>
+            <td className="text-center">{this.state.tangaryoMonk.numFirewatch }</td>
+            <td className="text-center">{this.state.tangaryoMonk.numShoten }</td>
+            <td className="text-center">{this.state.tangaryoMonk.numJikido }</td>
+            <td className="text-center">{this.state.tangaryoMonk.numJikidoPd }</td>
         </tr>;
     }
 

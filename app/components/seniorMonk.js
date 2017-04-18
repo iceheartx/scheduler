@@ -7,6 +7,7 @@ const FormControl = ReactBootstrap.FormControl;
 const ControlLabel = ReactBootstrap.ControlLabel;
 const Col = ReactBootstrap.Col;
 const Checkbox = ReactBootstrap.Checkbox;
+const cx = require('classnames');
 
 class SeniorMonks extends React.Component {
     constructor(props) {
@@ -26,15 +27,15 @@ class SeniorMonks extends React.Component {
 
     render() {
         return <tr key={this.state.seniorMonkNum}>
-            <td>D{this.state.seniorMonkNum}</td>
-            <td>{this.state.seniorMonk.name}</td>
-            <td><Checkbox defaultChecked={this.state.seniorMonk.jobs}></Checkbox></td>
-            <td><Checkbox defaultChecked={this.state.seniorMonk.soku}></Checkbox></td>
-            <td><Checkbox defaultChecked={this.state.seniorMonk.server}></Checkbox></td>
-            <td>{(this.state.seniorMonk.jobs) ? this.state.seniorMonk.numFirewatch : ''}</td>
-            <td>{(this.state.seniorMonk.jobs) ? this.state.seniorMonk.numShoten : ''}</td>
-            <td>{(this.state.seniorMonk.jobs) ? this.state.seniorMonk.numJikido : ''}</td>
-            <td>{(this.state.seniorMonk.jobs) ? this.state.seniorMonk.numJikidoPd : ''}</td>
+            <td className="text-center">D{this.state.seniorMonkNum}</td>
+            <td className="text-left">{this.state.seniorMonk.name}</td>
+            <td className="text-center"><Checkbox defaultChecked={this.state.seniorMonk.jobs}></Checkbox></td>
+            <td className="text-center"><Checkbox defaultChecked={this.state.seniorMonk.soku}></Checkbox></td>
+            <td className="text-center"><Checkbox defaultChecked={this.state.seniorMonk.server}></Checkbox></td>
+            <td className={cx("text-center",(this.state.seniorMonk.jobs) ?  '' : 'disabled' )}>{(this.state.seniorMonk.jobs) ? this.state.seniorMonk.numFirewatch : ''}</td>
+            <td className={cx("text-center",(this.state.seniorMonk.jobs) ?  '' : 'disabled' )}>{(this.state.seniorMonk.jobs) ? this.state.seniorMonk.numShoten : ''}</td>
+            <td className={cx("text-center",(this.state.seniorMonk.jobs) ?  '' : 'disabled' )}>{(this.state.seniorMonk.jobs) ? this.state.seniorMonk.numJikido : ''}</td>
+            <td className={cx("text-center",(this.state.seniorMonk.jobs) ?  '' : 'disabled' )}>{(this.state.seniorMonk.jobs) ? this.state.seniorMonk.numJikidoPd : ''}</td>
         </tr>;
     }
 

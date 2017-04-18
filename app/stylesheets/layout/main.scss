@@ -8,10 +8,24 @@
   width: $content-width;
 }
 
-th,td {
-  text-align: center;
+th, td {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+th {
+  color: white;
+  background-color: black;
+}
+
+table {
+  border-bottom: 1px solid black;
 }
 
 form {
   margin-top: 5px;
 }
+
+.disabled { background-color: silver }

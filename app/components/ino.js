@@ -21,7 +21,7 @@ class Ino extends React.Component {
     }
 
     render() {
-        return <Form horizontal>
+        return (<Form horizontal>
             <FormGroup
                 controlId="formBasicText"
                 validationState={this.getValidationState()}
@@ -39,7 +39,7 @@ class Ino extends React.Component {
                     <FormControl.Feedback />
                 </Col>
             </FormGroup>
-        </Form>;
+        </Form>);
     }
 
 }

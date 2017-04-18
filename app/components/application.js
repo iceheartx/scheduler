@@ -25,7 +25,7 @@ class Application extends React.Component {
 
     setView() {
         content =
-            <Tabs id="controlled-tab-example">
+            (<Tabs id="controlled-tab-example">
                 <Tab eventKey={1} title="Ino"><Ino inoName={this.state.inoName}/></Tab>
                 <Tab eventKey={2} title="Doans"><Doans numDoans={this.state.numDoans} doans={this.state.doans}/></Tab>
                 <Tab eventKey={3} title="Senior Monks"><SeniorMonks numSeniorMonks={this.state.numSeniorMonks}
@@ -35,7 +35,7 @@ class Application extends React.Component {
                 <Tab eventKey={5} title="Oryoki"><Oryoki doans={this.state.doans}/></Tab>
                 <Tab eventKey={6} title="Dates"><Dates /></Tab>
                 <Tab eventKey={7} title="Schedule">Schedule</Tab>
-            </Tabs>;
+            </Tabs>);
     }
 
     constructor(props, context) {

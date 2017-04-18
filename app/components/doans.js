@@ -24,7 +24,7 @@ class Doans extends React.Component {
         for (let x = 0; x < this.state.numDoans; x++) {
             outputRows.push(<Doan doanNum={x} doan={this.state.doans[x]}/>);
         }
-        return <tbody>
+        return (<tbody>
         <tr>
             <th className="text-center">id</th>
             <th className="text-center">name</th>
@@ -38,7 +38,7 @@ class Doans extends React.Component {
 
         </tr>
         {outputRows}
-        </tbody>;
+        </tbody>);
     }
 
     handleChange(e) {
@@ -47,7 +47,7 @@ class Doans extends React.Component {
 
     render() {
         const DoanRows = this.getDoanRows();
-        return <Form horizontal>
+        return (<Form horizontal>
             <FormGroup
                 controlId="formBasicText"
                 validationState={this.getValidationState()}
@@ -69,13 +69,14 @@ class Doans extends React.Component {
                 {DoanRows}
             </table>
 
-        </Form>;
+        </Form>);
     }
 
 }
 
 Doans.propTypes = {
     numDoans: types.number.isRequired,
+    doans: types.array.isRequired
 };
 
 module.exports = Doans;

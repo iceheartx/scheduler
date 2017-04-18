@@ -26,7 +26,7 @@ class TangaryoMonks extends React.Component {
         for (let x = 0; x < this.state.numTangaryoMonks; x++) {
             outputRows.push(<TangaryoMonk tangaryoMonkNum={x} tangaryoMonk={this.state.tangaryoMonks[x]}/>);
         }
-        return <tbody>
+        return (<tbody>
         <tr>
             <th className="text-center">id</th>
             <th className="text-center">name</th>
@@ -38,7 +38,7 @@ class TangaryoMonks extends React.Component {
 
         </tr>
         {outputRows}
-        </tbody>;
+        </tbody>);
     }
 
     handleChange(e) {
@@ -47,7 +47,7 @@ class TangaryoMonks extends React.Component {
 
     render() {
         const tangaryoMonkRows = this.getTangaryoMonks();
-        return <Form horizontal>
+        return (<Form horizontal>
             <FormGroup
                 controlId="formBasicText"
                 validationState={this.getValidationState()}
@@ -69,7 +69,7 @@ class TangaryoMonks extends React.Component {
                 {tangaryoMonkRows}
             </table>
 
-        </Form>;
+        </Form>);
     }
 
 }

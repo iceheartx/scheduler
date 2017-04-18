@@ -1,6 +1,4 @@
 const React = require('react');
-const types = React.PropTypes;
-
 const ReactBootstrap = require('react-bootstrap');
 const Checkbox = ReactBootstrap.Checkbox;
 const Form = ReactBootstrap.Form;
@@ -16,7 +14,6 @@ class Dates extends React.Component {
         super(props);
         this.state = {
             crewSize: 3,
-            doans: props.doans
         };
 
     }
@@ -25,13 +22,13 @@ class Dates extends React.Component {
     }
 
     render() {
-        return <Form horizontal>
+        return (<Form horizontal>
             <FormGroup controlId="formBasicText" validationState={this.getValidationState()}>
                 <Col componentClass={ControlLabel} sm={6}>
                     Oryoki Enabled
                 </Col>
                 <Col sm={6}>
-                    <Checkbox defaultChecked="true"></Checkbox>
+                    <Checkbox defaultChecked="true" />
                 </Col>
             </FormGroup>
             <FormGroup controlId="formBasicText" validationState={this.getValidationState()}>
@@ -58,30 +55,27 @@ class Dates extends React.Component {
             <FormGroup controlId="formBasicText" validationState={this.getValidationState()}>
                 <Col componentClass={ControlLabel} sm={6}> sesshin dates</Col>
                 <Col sm={6}>
-                    <FormControl type="text" value='2' placeholder="end date" onChange={this.handleChange}/>
+                    <FormControl type="text" value="2" placeholder="end date" onChange={this.handleChange}/>
                     <FormControl.Feedback />
                 </Col>
             </FormGroup>
             <FormGroup controlId="formBasicText" validationState={this.getValidationState()}>
                 <Col componentClass={ControlLabel} sm={6}> personal days </Col>
                 <Col sm={6}>
-                    <FormControl type="text" value='2' placeholder="end date" onChange={this.handleChange}/>
+                    <FormControl type="text" value="2" placeholder="end date" onChange={this.handleChange}/>
                     <FormControl.Feedback />
                 </Col>
             </FormGroup>
             <FormGroup controlId="formBasicText" validationState={this.getValidationState()}>
                 <Col componentClass={ControlLabel} sm={6}> work days </Col>
                 <Col sm={6}>
-                    <FormControl type="text" value='2' placeholder="end date" onChange={this.handleChange}/>
+                    <FormControl type="text" value="2" placeholder="end date" onChange={this.handleChange}/>
                     <FormControl.Feedback />
                 </Col>
             </FormGroup>
-        </Form>
+        </Form>);
     }
 }
 
-
-Dates.propTypes = {
-};
 
 module.exports = Dates;

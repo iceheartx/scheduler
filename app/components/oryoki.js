@@ -26,27 +26,26 @@ class Oryoki extends React.Component {
 
     renderCol(numServers, doan, key) {
         let rows = Array.from(Array(numServers).keys());
-        return <Col key={key} sm={4}>
+        return (<Col key={key} sm={4}>
             {doan.name}
             {rows.map(function (aa) {
-                debugger;
-                return <FormControl
+                return (<FormControl
                     type="text"
-                    value=''
-                    placeholder={"server "+aa}
-                />
+                    value=""
+                    placeholder={'server '+aa}
+                />);
             })}
-        </Col>
+        </Col>);
     }
 
     render() {
-        return <Form horizontal>
+        return (<Form horizontal>
             <FormGroup controlId="formBasicText" validationState={this.getValidationState()}>
                 <Col componentClass={ControlLabel} sm={6}>
                     Oryoki Enabled
                 </Col>
                 <Col sm={6}>
-                    <Checkbox defaultChecked="true"></Checkbox>
+                    <Checkbox defaultChecked="true" />
                 </Col>
             </FormGroup>
             <FormGroup controlId="formBasicText" validationState={this.getValidationState()}>
@@ -56,7 +55,7 @@ class Oryoki extends React.Component {
                 <Col sm={6}>
                     <FormControl
                         type="text"
-                        value='2'
+                        value="2"
                         placeholder="crew size"
                         onChange={this.handleChange}
                     />
@@ -68,7 +67,7 @@ class Oryoki extends React.Component {
                     Randomize Schedule
                 </Col>
                 <Col sm={6}>
-                    <Checkbox defaultChecked="true"></Checkbox>
+                    <Checkbox defaultChecked="true" />
                 </Col>
             </FormGroup>
             <FormGroup controlId="formBasicText" validationState={this.getValidationState()}>
@@ -76,7 +75,7 @@ class Oryoki extends React.Component {
                     this.state.doans.map(this.renderCol.bind(this, this.state.crewSize))
                 }
             </FormGroup>
-        </Form>;
+        </Form>);
 
     }
 }

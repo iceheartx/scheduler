@@ -26,7 +26,7 @@ class SeniorMonks extends React.Component {
         for (let x = 0; x < this.state.numSeniorMonks; x++) {
             outputRows.push(<SeniorMonk seniorMonkNum={x} seniorMonk={this.state.seniorMonks[x]}/>);
         }
-        return <tbody>
+        return (<tbody>
         <tr>
             <th className="text-center">id</th>
             <th className="text-center">name</th>
@@ -40,7 +40,7 @@ class SeniorMonks extends React.Component {
 
         </tr>
         {outputRows}
-        </tbody>;
+        </tbody>);
     }
 
     handleChange(e) {
@@ -49,7 +49,7 @@ class SeniorMonks extends React.Component {
 
     render() {
         const seniorMonkRows = this.getSeniorMonks();
-        return <Form horizontal>
+        return (<Form horizontal>
             <FormGroup controlId="formBasicText" validationState={this.getValidationState()}>
                 <Col componentClass={ControlLabel} sm={6}>
                     Number of Senior Monks
@@ -71,7 +71,7 @@ class SeniorMonks extends React.Component {
                 <Col sm={6}>
                     <FormControl
                         type="text"
-                        value='2'
+                        value="2"
                         placeholder="# monks"
                         onChange={this.handleChange}
                     />
@@ -82,7 +82,7 @@ class SeniorMonks extends React.Component {
                 {seniorMonkRows}
             </table>
 
-        </Form>;
+        </Form>);
     }
 
 }
